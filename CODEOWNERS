@@ -126,17 +126,14 @@ arch/arm/include/cortex_m/cmse.h          @ioannisg
 /drivers/sensor/lis*/                     @avisconti
 /drivers/sensor/lps*/                     @avisconti
 /drivers/sensor/lsm*/                     @avisconti
-<<<<<<< HEAD
 /drivers/serial/uart_altera_jtag_hal.c    @ramakrishnapallala
 /drivers/net/slip.c                       @jukkar @tbursztyka
-=======
 /drivers/serial/uart_altera_jtag_hal.c    @wentongwu
 /drivers/serial/*ns16550*                 @gnuless
 /drivers/serial/Kconfig.litex             @mateusz-holenko @kgugala @pgielda
 /drivers/serial/uart_liteuart.c           @mateusz-holenko @kgugala @pgielda
 /drivers/net/                             @jukkar @tbursztyka
 /drivers/ptp_clock/                       @jukkar
->>>>>>> b3739169cb... drivers: serial: add LiteUART driver
 /drivers/spi/                             @tbursztyka
 /drivers/spi/spi_ll_stm32.*               @superna9999
 /drivers/timer/cortex_m_systick.c         @ioannisg
@@ -151,19 +148,14 @@ arch/arm/include/cortex_m/cmse.h          @ioannisg
 /dts/arm/st/                              @erwango
 /dts/arm/nordic/                          @ioannisg @carlescufi
 /dts/arm/nxp/                             @MaureenHelm
-<<<<<<< HEAD
-=======
 /dts/arm/microchip/                       @franciscomunoz @albertofloyd @scottwcpg
 /dts/riscv32/rv32m1*                      @MaureenHelm
 /dts/riscv32/riscv32-litex-vexriscv.dtsi  @mateusz-holenko @kgugala @pgielda
->>>>>>> 342cbc9e01... soc: riscv32: add LiteX VexRiscV SoC
 /dts/bindings/                            @galak
 /dts/bindings/can/                        @alexanderwachter
 /dts/bindings/*/nordic*                   @anangl
 /dts/bindings/*/nxp*                      @MaureenHelm
-<<<<<<< HEAD
 /ext/fs/                                  @nashif @ramakrishnapallala
-=======
 /dts/bindings/*/openisa*                  @MaureenHelm
 /dts/bindings/*/st*                       @erwango
 /dts/bindings/sensor/ams*                 @alexanderwachter
@@ -173,7 +165,6 @@ arch/arm/include/cortex_m/cmse.h          @ioannisg
 /ext/fs/                                  @nashif @wentongwu
 /ext/hal/atmel/asf/sam/include/same70*/   @aurel32
 /ext/hal/atmel/asf/sam0/include/samr21/   @benpicco
->>>>>>> b3739169cb... drivers: serial: add LiteUART driver
 /ext/hal/cmsis/                           @MaureenHelm @galak
 /ext/hal/libmetal/                        @galak
 /ext/hal/nordic/                          @carlescufi @anangl
