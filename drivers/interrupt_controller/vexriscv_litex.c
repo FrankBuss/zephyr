@@ -19,14 +19,14 @@
 #define UART0_IRQ		DT_LITEX_UART0_E0001800_IRQ_0
 static inline void vexriscv_litex_irq_setmask(u32_t mask)
 {
-	__asm__ volatile ("csrw %0, %1" :: "i"(IRQ_MASK), "r"(mask));
+//	__asm__ volatile ("csrw %0, %1" :: "i"(IRQ_MASK), "r"(mask));
 }
 
 static inline u32_t vexriscv_litex_irq_getmask(void)
 {
 	u32_t mask;
 
-	__asm__ volatile ("csrr %0, %1" : "=r"(mask) : "i"(IRQ_MASK));
+//	__asm__ volatile ("csrr %0, %1" : "=r"(mask) : "i"(IRQ_MASK));
 	return mask;
 }
 

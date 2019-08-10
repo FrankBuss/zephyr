@@ -53,11 +53,13 @@ struct uart_liteuart_data {
  */
 static void uart_liteuart_poll_out(struct device *dev, unsigned char c)
 {
+    volatile uint32_t* data = (volatile uint32_t*) 0xF0010000;
+    volatile uint32_t* status = (volatile uint32_t*) 0xF0010004;
 	/* wait for space */
-	while (sys_read8(UART_TXFULL))
+	while ((*status) & (1 << 16))
 		;
 
-	sys_write8(c, UART_RXTX);
+	*data = c;
 }
 
 /**
@@ -70,13 +72,10 @@ static void uart_liteuart_poll_out(struct device *dev, unsigned char c)
  */
 static int uart_liteuart_poll_in(struct device *dev, unsigned char *c)
 {
-	if (!sys_read8(UART_RXEMPTY)) {
-		*c = sys_read8(UART_RXTX);
-
-		/* refresh UART_RXEMPTY by writing UART_EV_RX
-		 * to UART_EV_PENDING
-		 */
-		sys_write8(UART_EV_RX, UART_EV_PENDING);
+    volatile uint32_t* data = (volatile uint32_t*) 0xF0010000;
+    volatile uint32_t* status = (volatile uint32_t*) 0xF0010004;
+	if ((*status) & (1 << 24)) {
+		*c = (*data) & 0xff;
 		return 0;
 	} else {
 		return -1;
